@@ -1,0 +1,22 @@
+USE [loja]
+GO
+
+/****** Object:  Table [dbo].[usuario]    Script Date: 20/11/2023 10:13:51 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[usuario](
+	[IDUsuario] [int] IDENTITY(1,1) NOT NULL,
+	[Login] [varchar](40) NOT NULL,
+	[senha] [varchar](10) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[IDUsuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

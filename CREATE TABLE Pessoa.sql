@@ -1,0 +1,24 @@
+USE [loja]
+GO
+
+/****** Object:  Table [dbo].[Pessoa]    Script Date: 20/11/2023 10:09:09 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Pessoa](
+	[PessoaID] [int] NOT NULL,
+	[Nome] [varchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[PessoaID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Pessoa] ADD  DEFAULT (NEXT VALUE FOR [pessoa_id_seq]) FOR [PessoaID]
+GO
+
+
